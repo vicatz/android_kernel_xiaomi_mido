@@ -627,6 +627,12 @@ KBUILD_CFLAGS	+= $(call cc-disable-warning, format-truncation)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, format-overflow)
 KBUILD_CFLAGS	+= $(call cc-disable-warning, int-in-bool-context)
 
+# GCC 7.x warnings
+KBUILD_CFLAGS	+= $(call cc-disable-warning, bool-operation)
+KBUILD_CFLAGS	+= $(call cc-disable-warning, duplicate-decl-specifier)
+KBUILD_CFLAGS	+= $(call cc-disable-warning, memset-elt-size)
+KBUILD_CFLAGS	+= $(call cc-disable-warning, parentheses)
+
 # Needed to unbreak GCC 7.x and above
 KBUILD_CFLAGS   += $(call cc-option,-fno-store-merging,)
 
